@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hackathon-starter-db
+  namespace: hackathon-starter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hackathon-starter-db
+  template:
+    metadata:
+      labels:
+        app: hackathon-starter-db
+    spec:
+      containers:
+      - name: db
+        image:  kaka2112/elsa-demo/mongo:latest
+        ports:
+        - containerPort: 27017
+        volumeMounts:
+        - name: mongo-data
+          mountPath: /data/db
+      volumes:
+      - name: mongo-data
+        emptyDir: {}
+

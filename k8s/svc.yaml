@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hackathon-starter-web
+  namespace: hackathon-starter
+spec:
+  type: ClusterIP
+  selector:
+    app: hackathon-starter-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
