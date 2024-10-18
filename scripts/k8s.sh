@@ -2,6 +2,10 @@
 
 # Stop the script if any command fails
 set -e
+# for minkube
+kubectl() {
+    minikube kubectl -- "$@"
+}
 
 # Define variables
 NAMESPACE="hackathon-starter"

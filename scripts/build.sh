@@ -4,9 +4,9 @@
 set -e
 
 # Define variables
-REGISTRY_URL="your-registry-url.com"
-DOCKER_USERNAME="your-username"
-DOCKER_PASSWORD="your-password"
+REGISTRY_URL="docker.io"
+DOCKER_USERNAME="kaka2112"
+DOCKER_PASSWORD="dckr_pat_JchzYF1ILfc1VQ5OSMQMbllyigg"
 SERVICE_1_NAME="hackathon-starter-web"
 SERVICE_2_NAME="hackathon-starter-db"
 TAG="latest"
@@ -20,16 +20,16 @@ docker_login() {
 # Function to build Docker images
 build_images() {
     echo "Building Docker images..."
-    docker build -t "$REGISTRY_URL/$SERVICE_1_NAME:$TAG" ./web
-    docker build -t "$REGISTRY_URL/$SERVICE_2_NAME:$TAG" ./db
+    docker build -t "$REGISTRY_URL/$SERVICE_1_NAME:$TAG" ../web
+    #docker build -t "$REGISTRY_URL/$SERVICE_2_NAME:$TAG" ./db
     echo "Docker images built successfully."
 }
 
 # Function to push Docker images to the registry
 push_images() {
     echo "Pushing Docker images to registry..."
-    docker push "$REGISTRY_URL/$SERVICE_1_NAME:$TAG"
-    docker push "$REGISTRY_URL/$SERVICE_2_NAME:$TAG"
+    docker push "$DOCKER_USERNAME/$SERVICE_1_NAME:$TAG"
+    #docker push "$REGISTRY_URL/$SERVICE_2_NAME:$TAG"
     echo "Docker images pushed successfully."
 }
 
