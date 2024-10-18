@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: kaka2112/elsa-demo/hackathon-starter-web:latest
+        image: kaka2112/hackathon-starter-web:latest
         ports:
         - containerPort: 8080
         env:

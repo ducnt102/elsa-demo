@@ -6,7 +6,7 @@ set -e
 # Define variables
 REGISTRY_URL="docker.io"
 DOCKER_USERNAME="kaka2112"
-DOCKER_PASSWORD="dckr_pat_JchzYF1ILfc1VQ5OSMQMbllyigg"
+DOCKER_PASSWORD="xyz"
 SERVICE_1_NAME="hackathon-starter-web"
 SERVICE_2_NAME="hackathon-starter-db"
 TAG="latest"
